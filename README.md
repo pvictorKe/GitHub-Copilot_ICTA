@@ -1,1 +1,1 @@
-# Learn-Github-copilot-icta
+# GitHub-Copilot_ICTA
