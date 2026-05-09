@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | NovaFix Tech</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-name">NovaFix Tech</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+
+      <nav class="nav">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link" href="./contact.html">Contact</a>
+        <a class="nav-link" href="./signin.html">Sign In</a>
+        <a class="nav-link latest" href="./signup.html">Latest</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow">Tech repair • Installation • Maintenance</p>
+        <h1>Services</h1>
+        <p class="lead">
+          Everything you need to keep devices secure, fast, and dependable—plus CCTV installation and support.
+        </p>
+      </div>
+      <div class="hero-accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card media-card">
+        <img class="card-media" alt="Technician repairing a computer" src="https://images.unsplash.com/photo-1586864388252-3b7f4bcb1d2d?auto=format&fit=crop&w=1200&q=60" />
+        <h2 class="card-title">Computer Repair</h2>
+        <p class="muted">Diagnostics, hardware faults, overheating fixes, boot issues, and performance recovery.</p>
+      </article>
+      <article class="card media-card">
+        <img class="card-media" alt="Upgrading RAM and storage" src="https://images.unsplash.com/photo-1616627986837-9ec7c4d8b7b6?auto=format&fit=crop&w=1200&q=60" />
+        <h2 class="card-title">Hardware Upgrades</h2>
+        <p class="muted">SSD/HDD upgrades, RAM upgrades, cooling improvements, and optimization.</p>
+      </article>
+      <article class="card media-card">
+        <img class="card-media" alt="Installing software and drivers" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=60" />
+        <h2 class="card-title">Software Installation</h2>
+        <p class="muted">OS installs, drivers, productivity suites, and essential business software setup.</p>
+      </article>
+      <article class="card media-card">
+        <img class="card-media" alt="Network configuration and security" src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f?auto=format&fit=crop&w=1200&q=60" />
+        <h2 class="card-title">Configuration & Security</h2>
+        <p class="muted">Network setup, user configuration, backups, and baseline security hardening.</p>
+      </article>
+      <article class="card media-card">
+        <img class="card-media" alt="System health check" src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=60" />
+        <h2 class="card-title">Maintenance Plans</h2>
+        <p class="muted">Health checks, updates management, performance audits, and preventive maintenance.</p>
+      </article>
+      <article class="card media-card">
+        <img class="card-media" alt="Computer accessories" src="https://images.unsplash.com/photo-1580915411954-282cb0a0a9d6?auto=format&fit=crop&w=1200&q=60" />
+        <h2 class="card-title">Accessories Supply</h2>
+        <p class="muted">Cables, adapters, keyboards, mice, storage options, and tech accessories support.</p>
+      </article>
+      <article class="card media-card">
+        <img class="card-media" alt="CCTV camera installation" src="https://images.unsplash.com/photo-1520694478164-240f4bd5b4c7?auto=format&fit=crop&w=1200&q=60" />
+        <h2 class="card-title">CCTV Installation</h2>
+        <p class="muted">Camera placement planning, DVR/NVR setup, and initial system configuration.</p>
+      </article>
+      <article class="card media-card">
+        <img class="card-media" alt="Maintaining a security camera system" src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=60" />
+        <h2 class="card-title">CCTV Maintenance</h2>
+        <p class="muted">Cleaning, alignment checks, firmware updates support, and signal troubleshooting.</p>
+      </article>
+    </section>
+
+    <section class="cta">
+      <div>
+        <h2>Need a quick fix?</h2>
+        <p class="muted">Contact us with your device details and we’ll recommend the best next step.</p>
+      </div>
+      <a class="btn" href="./contact.html">Request Support</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> NovaFix Tech. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="./contact.html">Support</a>
+        <a href="./services.html">Pricing</a>
+        <a href="./signin.html">Account</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+

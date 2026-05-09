@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | NovaFix Tech</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-name">NovaFix Tech</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+
+      <nav class="nav">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link" href="./contact.html">Contact</a>
+        <a class="nav-link" href="./signin.html">Sign In</a>
+        <a class="nav-link latest" href="./signup.html">Latest</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow">Built for speed. Designed for uptime.</p>
+        <h1>About NovaFix Tech</h1>
+        <p class="lead">
+          We’re a computer repair, hardware/software installation, configuration, and maintenance team.
+          From diagnostics to disaster recovery, we keep systems stable, secure, and running fast.
+        </p>
+      </div>
+      <div class="hero-accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="grid-3">
+      <article class="card">
+        <h2 class="card-title">Hardware Repair & Upgrades</h2>
+        <p class="muted">Laptops, desktops, SSD/HDD upgrades, RAM upgrades, thermal fixes, and performance tuning.</p>
+      </article>
+      <article class="card">
+        <h2 class="card-title">Software Install & Configuration</h2>
+        <p class="muted">OS installs, driver setup, application installs, network configuration, and security baselines.</p>
+      </article>
+      <article class="card">
+        <h2 class="card-title">CCTV Setup & Maintenance</h2>
+        <p class="muted">Installation, DVR/NVR configuration, camera alignment checks, and ongoing maintenance.</p>
+      </article>
+    </section>
+
+    <section class="split">
+      <div class="panel">
+        <h2 class="panel-title">Scalable & Future-Ready</h2>
+        <p class="muted">
+          Our approach is modern and repeatable: clear checklists, stable configurations, and documented maintenance.
+          It’s not just a repair—it’s a system upgrade.
+        </p>
+        <ul class="list">
+          <li><span class="dot"></span> Rapid diagnostics</li>
+          <li><span class="dot"></span> Config consistency</li>
+          <li><span class="dot"></span> Accessories & procurement support</li>
+          <li><span class="dot"></span> Maintenance planning</li>
+        </ul>
+      </div>
+
+      <aside class="aside">
+        <div class="mini-stat">
+          <div class="mini-label">Response</div>
+          <div class="mini-value">Fast</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-label">Focus</div>
+          <div class="mini-value">Uptime</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mini-label">Coverage</div>
+          <div class="mini-value">Tech + CCTV</div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> NovaFix Tech. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="./contact.html">Support</a>
+        <a href="./services.html">Pricing</a>
+        <a href="./signin.html">Account</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+

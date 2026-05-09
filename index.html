@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | NovaFix Tech</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-name">NovaFix Tech</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+
+      <nav class="nav">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link" href="./contact.html">Contact</a>
+        <a class="nav-link" href="./signin.html">Sign In</a>
+        <a class="nav-link latest" href="./signup.html">Latest</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow">Computer Repair • CCTV • Install & Maintain</p>
+        <h1>Fix. Configure. Protect.</h1>
+        <p class="lead">
+          Hardware repair, software installation/configuration, maintenance, accessories, and CCTV installation & upkeep.
+          Built for uptime—powered by a futuristic workflow.
+        </p>
+      </div>
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-video-track">
+          <!-- 4 “moving” background videos (lightweight looping). Autoplay muted. -->
+          <video class="hero-video" muted autoplay loop playsinline>
+            <source src="https://cdn.coverr.co/videos/coverr-laptop-on-desk-1577/1080p.mp4" type="video/mp4" />
+          </video>
+          <video class="hero-video" muted autoplay loop playsinline>
+            <source src="https://cdn.coverr.co/videos/coverr-working-on-a-computer-1575/1080p.mp4" type="video/mp4" />
+          </video>
+          <video class="hero-video" muted autoplay loop playsinline>
+            <source src="https://cdn.coverr.co/videos/coverr-security-camera-2-1/1080p.mp4" type="video/mp4" />
+          </video>
+          <video class="hero-video" muted autoplay loop playsinline>
+            <source src="https://cdn.coverr.co/videos/coverr-installing-a-computer-1745/1080p.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="split">
+      <div class="panel">
+        <h2 class="panel-title">What we do</h2>
+        <div class="grid-2" style="margin-top:0;">
+          <article class="card">
+            <h3 class="card-title">Repair & Diagnostics</h3>
+            <p class="muted">Identify root causes and restore performance safely.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">Hardware/Software</h3>
+            <p class="muted">Install, configure, optimize, and maintain systems.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">Accessories</h3>
+            <p class="muted">Cables, adapters, storage, and essential upgrades.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">CCTV Setup</h3>
+            <p class="muted">Installation, configuration, and maintenance support.</p>
+          </article>
+        </div>
+
+        <div class="cta">
+          <div>
+            <h2 style="margin:0 0 8px;">Request a maintenance check</h2>
+            <p class="muted" style="margin:0;">Share your device details—we’ll recommend the fastest safe fix.</p>
+          </div>
+          <a class="btn" href="./contact.html">Latest Update Request</a>
+        </div>
+      </div>
+
+      <!-- Updates panel on the right (Home) -->
+      <aside class="aside">
+        <div class="mini-stat">
+          <div class="mini-label">Updates / Announcements</div>
+          <div class="mini-value">LIVE</div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-title">This week</div>
+          <ul class="list">
+            <li><span class="dot"></span> Fast diagnostics workflow improvements</li>
+            <li><span class="dot"></span> CCTV maintenance checklist update</li>
+            <li><span class="dot"></span> Accessory compatibility guides added</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <div class="info-title">Upcoming</div>
+          <p class="muted">Scheduled maintenance slots for system tune-ups and network configuration.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> NovaFix Tech. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="./contact.html">Support</a>
+        <a href="./services.html">Pricing</a>
+        <a href="./signin.html">Account</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+

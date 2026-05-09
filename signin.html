@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In | NovaFix Tech</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-name">NovaFix Tech</span>
+      </a>
+      <nav class="nav nav-auth">
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link latest" href="./signup.html">Latest</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <h1 class="auth-title">Sign In</h1>
+      <p class="muted">Welcome back. Transparent UI for a futuristic feel.</p>
+
+      <form onsubmit="event.preventDefault(); toast('Signed in (demo).');">
+        <label class="field">
+          <span class="field-label">Email</span>
+          <input class="input" type="email" placeholder="you@example.com" required />
+        </label>
+
+        <label class="field">
+          <span class="field-label">Password</span>
+          <input class="input" type="password" placeholder="••••••••" required />
+        </label>
+
+        <button class="btn" type="submit">Sign In</button>
+
+        <div class="auth-links">
+          <a class="link" href="#" onclick="event.preventDefault(); toast('Reset link (demo).');">Forgot password?</a>
+          <a class="link" href="./signup.html">Create an account</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer footer-auth">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> NovaFix Tech.</div>
+      <div class="footer-links">
+        <a href="./contact.html">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toast(msg){
+      const t = document.createElement('div');
+      t.className='toast';
+      t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(()=>{ t.remove(); }, 2500);
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | NovaFix Tech</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-name">NovaFix Tech</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" type="button">☰</button>
+
+      <nav class="nav">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./about.html">About</a>
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link" href="./contact.html">Contact</a>
+        <a class="nav-link" href="./signin.html">Sign In</a>
+        <a class="nav-link latest" href="./signup.html">Latest</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-hero">
+      <div>
+        <p class="eyebrow">Let’s get your system back online</p>
+        <h1>Contact</h1>
+        <p class="lead">Email us and include device model + issue summary for faster troubleshooting.</p>
+      </div>
+      <div class="hero-accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="split">
+      <form class="panel" onsubmit="event.preventDefault(); toast('Message prepared (demo).');">
+        <h2 class="panel-title">Send a Support Request</h2>
+        <div class="form-grid">
+          <label class="field">
+            <span class="field-label">Your Name</span>
+            <input class="input" type="text" placeholder="e.g., John" required />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input class="input" type="email" placeholder="you@example.com" required />
+          </label>
+
+          <label class="field" style="grid-column: 1 / -1;">
+            <span class="field-label">What do you need?</span>
+            <textarea class="input textarea" placeholder="Repair / Installation / CCTV / Maintenance" rows="5" required></textarea>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Send Message</button>
+          <a class="btn secondary" href="mailto:pvictor.ke@gmail.com">Email Us</a>
+        </div>
+
+        <p class="fineprint">Direct email: <a href="mailto:pvictor.ke@gmail.com">pvictor.ke@gmail.com</a></p>
+      </form>
+
+      <aside class="aside">
+        <div class="info-block">
+          <div class="info-title">Quick Checklist</div>
+          <ul class="list">
+            <li><span class="dot"></span> Device model + RAM/Storage</li>
+            <li><span class="dot"></span> Error message (if any)</li>
+            <li><span class="dot"></span> Any recent changes (new software/updates)</li>
+            <li><span class="dot"></span> CCTV model/DVR/NVR (if applicable)</li>
+          </ul>
+        </div>
+
+        <div class="info-block">
+          <div class="info-title">Response Mode</div>
+          <p class="muted">We triage issues first, then propose the fastest safe fix.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> NovaFix Tech. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="./contact.html">Support</a>
+        <a href="./services.html">Pricing</a>
+        <a href="./signin.html">Account</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+      document.querySelector('.nav')?.classList.toggle('open');
+    });
+
+    function toast(msg){
+      const t = document.createElement('div');
+      t.className='toast';
+      t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(()=>{ t.remove(); }, 2500);
+    }
+  </script>
+</body>
+</html>
+

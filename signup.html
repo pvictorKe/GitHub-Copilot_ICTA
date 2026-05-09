@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | NovaFix Tech</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-name">NovaFix Tech</span>
+      </a>
+      <nav class="nav nav-auth">
+        <a class="nav-link" href="./services.html">Services</a>
+        <a class="nav-link latest" href="./signin.html">Latest</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="auth-wrap">
+    <div class="auth-card auth-card-wide">
+      <h1 class="auth-title">Sign Up</h1>
+      <p class="muted">Create your account with a lightweight, modern design.</p>
+
+      <form onsubmit="event.preventDefault(); toast('Account created (demo).');">
+        <div class="form-grid">
+          <label class="field">
+            <span class="field-label">Full Name</span>
+            <input class="input" type="text" placeholder="e.g., Alex" required />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input class="input" type="email" placeholder="you@example.com" required />
+          </label>
+
+          <label class="field" style="grid-column: 1 / -1;">
+            <span class="field-label">Password</span>
+            <input class="input" type="password" placeholder="Create a strong password" required />
+          </label>
+        </div>
+
+        <button class="btn" type="submit">Create Account</button>
+
+        <div class="auth-links">
+          <a class="link" href="./signin.html">Already have an account?</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer footer-auth">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> NovaFix Tech.</div>
+      <div class="footer-links">
+        <a href="./contact.html">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toast(msg){
+      const t = document.createElement('div');
+      t.className='toast';
+      t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(()=>{ t.remove(); }, 2500);
+    }
+  </script>
+</body>
+</html>
+
